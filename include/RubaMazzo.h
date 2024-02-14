@@ -25,6 +25,7 @@ public:
     void tentativo(int* mazzo, int numMazzo, int elem);
     void removeCentroAddinMazzo(int *mazzo, int numMazzo, int pos);
 
+    void g1Move();
 
 protected:
     int *carteMazzo; // 0   mazzo integrale che all'inizio del gioco ha 40 carte
