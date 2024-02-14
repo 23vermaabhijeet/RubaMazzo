@@ -170,8 +170,18 @@ int searchCentro(int elem){
     return -1;
 }
 
-void removeCentroAddinMazzo(int *mazzo, int numMazzo, int pos){
-    //da implementare
+void RubaMazzo::removeCentroAddinMazzo(int *mazzo, int numMazzo, int pos){
+    int card = centro[pos];
+
+    add(mazzo, numMazzo, card);
+
+    for (int i = pos; i < dim[1] - 1; i++) {
+        centro[i] = centro[i + 1];
+    }
+
+    dim[1]--;
+
+    cout << "Carta rimossa dal mazzo centrale e aggiunta con successo al mazzo di destinazione." << endl;
 }
 
 void tentativo(int* mazzo, int numMazzo, int elem){
@@ -196,5 +206,29 @@ void RubaMazzo::giocatoreVsGiocatore(){
 
 }
 
+
+void RubaMazzo::g1Move() {
+    cout << endl << "\n\nTurno giocatore 1" << endl;
+    int cartaScelta;
+    bool cartaValida = false;
+
+    do {
+        cout << "\n\nScegliere una carta dal mazzo centrale (1-" << dim[1] << "): ";
+        cin >> cartaScelta;
+        cartaValida = (cartaScelta >= 1 && cartaScelta <= dim[1]);
+        if (!cartaValida) {
+            cout << "\n\nCarta non valida. Riprova.";
+        }
+    } while (!cartaValida);
+
+    int cartaRimossa = centro[cartaScelta - 1];
+    cout << "\n\nHai rimosso la carta " << c[cartaRimossa] << " dal mazzo centrale.";
+
+    removeCentroAddinMazzo(centro, 1, cartaScelta - 1);
+    add(mazzoG1, 2, cartaRimossa);
+    cout << "\n\nHai aggiunto la carta " << c[cartaRimossa] << " al tuo mazzo.";
+
+    printMazzi();
+}
 
 
