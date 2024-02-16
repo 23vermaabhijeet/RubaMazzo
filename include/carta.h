@@ -18,6 +18,13 @@ class Carta
         void setNome(string name);
         void setNumero(int number);
         void setPunteggio(int point);
+
+        string getSeme();   //aggiornato
+        string getNome();  //aggiornato
+        int getNumero();   //aggiornato
+        int getPunteggio();     //aggiornato
+
+
         int confronta(Carta c2, Carta briscola);
         int operator+(Carta c2);
         friend istream& operator>>(istream& in, Carta c);

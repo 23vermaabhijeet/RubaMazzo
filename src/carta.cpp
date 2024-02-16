@@ -83,6 +83,22 @@ int Carta::operator+(Carta c2){
     return (numero + c2.numero);
 }
 
+string Carta::getSeme(){
+    return seme;
+}
+
+string Carta::getNome(){
+    return nome;
+}
+
+int Carta::getNumero(){
+    return numero;
+}
+
+int Carta::getPunteggio(){
+    return punteggio;
+}
+
 istream& operator>>(istream& in, Carta c){
 
     do{
@@ -106,11 +122,10 @@ istream& operator>>(istream& in, Carta c){
     return in;
 }
 
-
 ostream& operator<<(ostream& out, const Carta c){
-    cout << endl << "Seme: " << c.seme;
-    cout << endl << "Nome: " << c.nome;
-    cout << endl << "Numero: " << c.numero;
-    cout << endl << "Punteggio: " << c.punteggio;
+    //cout << endl << "Seme: " << c.seme;
+    cout << endl << "\t| Nome: " << c.nome;
+    cout << endl << "\t| Numero: " << c.numero;
+    //cout << endl << "Punteggio: " << c.punteggio;
     return out;
 }

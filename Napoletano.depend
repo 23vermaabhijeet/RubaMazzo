@@ -1,0 +1,246 @@
+# depslib dependency file v1.0
+1707655681 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1705336628 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1707666573 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\include\mazzodicarte.h
+	"carta.h"
+
+1705225865 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\include\carta.h
+	<iostream>
+	<string>
+
+1705225880 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1705352634 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1707666596 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1707667814 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+
+1707668042 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\c++\2-secondo periodo\napoletano\include\rubamazzo.h
+	"napoletano.h"
+
+1707734619 source:c:\users\vermaa20\downloads\document from verma\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1707736656 c:\users\vermaa20\downloads\document from verma\include\rubamazzo.h
+	"napoletano.h"
+
+1707734619 c:\users\vermaa20\downloads\document from verma\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1707734619 c:\users\vermaa20\downloads\document from verma\include\mazzodicarte.h
+	"carta.h"
+
+1707734619 c:\users\vermaa20\downloads\document from verma\include\carta.h
+	<iostream>
+	<string>
+
+1707734619 source:c:\users\vermaa20\downloads\document from verma\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1707734619 source:c:\users\vermaa20\downloads\document from verma\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1707734619 source:c:\users\vermaa20\downloads\document from verma\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1707736181 source:c:\users\vermaa20\downloads\document from verma\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+
+1707734620 source:c:\users\pc\documents\scuola\informatica\c++\prj_ruba\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1707774653 c:\users\pc\documents\scuola\informatica\c++\prj_ruba\include\rubamazzo.h
+	"napoletano.h"
+
+1707734620 c:\users\pc\documents\scuola\informatica\c++\prj_ruba\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1707734620 c:\users\pc\documents\scuola\informatica\c++\prj_ruba\include\mazzodicarte.h
+	"carta.h"
+
+1707734620 c:\users\pc\documents\scuola\informatica\c++\prj_ruba\include\carta.h
+	<iostream>
+	<string>
+
+1707734620 source:c:\users\pc\documents\scuola\informatica\c++\prj_ruba\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1707734620 source:c:\users\pc\documents\scuola\informatica\c++\prj_ruba\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1707734620 source:c:\users\pc\documents\scuola\informatica\c++\prj_ruba\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1707774613 source:c:\users\pc\documents\scuola\informatica\c++\prj_ruba\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+
+1707734620 source:c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1707943070 c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\include\rubamazzo.h
+	"napoletano.h"
+
+1707734620 c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1707734620 c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\include\mazzodicarte.h
+	"carta.h"
+
+1707941281 c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\include\carta.h
+	<iostream>
+	<string>
+
+1707941297 source:c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1707734620 source:c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1707734620 source:c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1707943035 source:c:\users\14ver\downloads\prj_rubamazzo_v2_14_02_2024\prj_ruba\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+
+1707734620 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1707946541 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\include\rubamazzo.h
+	"napoletano.h"
+
+1707734620 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1707734620 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\include\mazzodicarte.h
+	"carta.h"
+
+1707941281 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\include\carta.h
+	<iostream>
+	<string>
+
+1707941297 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1707734620 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1707734620 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1707946464 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\prj_ruba\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+
+1707991893 source:c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1707993299 c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\include\rubamazzo.h
+	"napoletano.h"
+
+1707991894 c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1707991894 c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\include\mazzodicarte.h
+	"carta.h"
+
+1707991894 c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\include\carta.h
+	<iostream>
+	<string>
+
+1707991893 source:c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1707991894 source:c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1707991894 source:c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1707993722 source:c:\users\vermaa20\downloads\version 1.2-20240215t101026z-001\version 1.2\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+
+1708023071 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1708016888 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\include\carta.h
+	<iostream>
+	<string>
+
+1708016888 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1708016888 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\include\mazzodicarte.h
+	"carta.h"
+
+1708016888 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1708016888 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1708017084 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1708028409 c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\include\rubamazzo.h
+	"napoletano.h"
+
+1708028803 source:c:\users\14ver\onedrive\desktop\classe 4bi\informatica\progetti\ruba mazzo\version 1.3\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+

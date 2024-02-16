@@ -11,21 +11,26 @@ public:
     ~RubaMazzo();
     void initialize();
     void startGame();
-    void giocatore();
+    void giocatore(int* &mano, int* &mazzo, int numMano, int numMazzo);   //aggiornato
+
     void computer();
     void giocatoreVsComputer();
     void giocatoreVsGiocatore();
-    int removeElem(int* mazzo, int numMazzo);
-    void add(int* mazzo, int numMazzo, int elem);
-    void print(int *mazzo, int numMazzo);
+    int removeElem(int* &mazzo, int numMazzo, int pos);   //aggiornato
+    void add(int* &mazzo, int numMazzo, int elem);
+    void print(int* &mazzo, int numMazzo);
 
     void inizio();
     void ricarica();
-    void printMazzi();
+    void printMazzi(int numMazzo);
     void tentativo(int* mazzo, int numMazzo, int elem);
-    void removeCentroAddinMazzo(int *mazzo, int numMazzo, int pos);
+    bool removeCentroAddinMazzo(int* &mano, int* &mazzo, int numMano, int numMazzo, int pos, int* &mazzoPart, int numMazzoPart);   //aggiornato
 
-    void g1Move();
+
+    void title();
+
+    bool rubaMazzo(int* &mazzo, int numMazzo, int scelta, int* &mazzoDest, int numDest);
+
 
 protected:
     int *carteMazzo; // 0   mazzo integrale che all'inizio del gioco ha 40 carte
