@@ -2,6 +2,8 @@
 #include <ctime>
 
 using namespace std;
+
+
 RubaMazzo::RubaMazzo(){
     carteMazzo = nullptr;
     manoG1 = nullptr;
@@ -21,6 +23,11 @@ RubaMazzo::~RubaMazzo(){
     delete[] centro;
 }
 
+
+
+
+
+//metodi generali
 void RubaMazzo::startGame() {
     initialize();
     switch (typeGame()) {
@@ -153,48 +160,20 @@ void RubaMazzo::printMazzi(int numMazzo){
 
 }
 
-//GIOCO
 
-void RubaMazzo::inizio(){
-    centro = new int[4];
-    dim[1] = 4;
-    int cont = 0;
 
-    for(int i = 0; i < dim[1]; i++){
-        centro[i] = removeElem(carteMazzo, 0, 0);
-    }
-    ricarica();
-    int times = 0;
-    while(times < 18){
-        giocatore(manoG1, mazzoG1, 4, 2);
-        giocatore(manoG2, mazzoG2, 5, 3);
-        cont++;
-        times++;
-        if(cont == 3 && times < 18){
-            ricarica();
-            cont = 0;
-        }
-    }
 
-    if(dim[1] > 0){
-        int numCarte = dim[1];
-        for(int i = 0; i < numCarte; i++){
-            int card = removeElem(centro, 1, 0);
-            add(mazzoG2, 3, card);
-        }
-    }
 
-    system("cls");
-    title();
-    printMazzi(3);
-    cout << endl << "\n\n\t\tCarte giocatore 1: " << dim[2];
-    cout << endl << "\t\tCarte giocatore 2: " << dim[3];
-    if(dim[2] > dim[3]){
-        cout << endl << "\n\n\t\tHa vinto il giocatore 1\n\n";
-    } else {
-        cout << endl << "\n\n\t\tHa vinto il giocatore 2\n\n";
-    }
-}
+
+
+
+
+
+
+
+
+
+//Giocatore 1 vs giocatore 2
 
 void RubaMazzo::ricarica(){
     delete[] manoG1;
@@ -245,6 +224,7 @@ bool RubaMazzo::removeCentroAddinMazzo(int* &mano, int* &mazzo, int numMano, int
         } else {
             int card1 = removeElem(mano, numMano, pos);
             add(mazzo, numMazzo, card1);
+            system("pause");
         }
         return false;
     }
@@ -259,22 +239,19 @@ bool RubaMazzo::rubaMazzo(int* &mazzo, int numMazzo, int scelta, int* &mazzoDest
             card = removeElem(mazzo, numMazzo, 0);
             add(mazzoDest, numDest, card);
         }
-        system("pause");
         return true;
     }
     return false;
 }
 
 void tentativo(int *mazzo, int numMazzo, int elem){
-    //if()
+
 }
 
 void RubaMazzo::giocatore(int* &mano, int* &mazzo, int numMano, int numMazzo) {
     int cartaScelta;
     bool cartaValida = false;
 
-    system("cls");
-    title();
     if(numMano == 4){
         cout << endl << "\nTurno giocatore 1" << endl;
     } else {
@@ -283,7 +260,7 @@ void RubaMazzo::giocatore(int* &mano, int* &mazzo, int numMano, int numMazzo) {
 
     printMazzi(numMazzo);
     do {
-        cout << endl << "Scegliere una carta dal mazzo centrale (1-" << dim[numMano] << "): ";
+        cout << endl << "Scegliere una carta dalla mano (1-" << dim[numMano] << "): ";
         cin >> cartaScelta;
         cartaValida = (cartaScelta >= 1 && cartaScelta <= dim[numMano]);
         if (!cartaValida) {
@@ -300,16 +277,171 @@ void RubaMazzo::giocatore(int* &mano, int* &mazzo, int numMano, int numMazzo) {
     }
 }
 
-void RubaMazzo::computer() {
 
-}
-
-void RubaMazzo::giocatoreVsComputer(){
-    inizio();
-}
 
 void RubaMazzo::giocatoreVsGiocatore(){
-    inizio();
+    centro = new int[4];
+    dim[1] = 4;
+    int cont = 0;
+
+    for(int i = 0; i < dim[1]; i++){
+        centro[i] = removeElem(carteMazzo, 0, 0);
+    }
+    ricarica();
+    int times = 0;
+    while(times < 18){
+        system("cls");
+        title(1);
+        giocatore(manoG1, mazzoG1, 4, 2);
+        system("cls");
+        title(1);
+        giocatore(manoG2, mazzoG2, 5, 3);
+        cont++;
+        times++;
+        if(cont == 3 && times < 18){
+            ricarica();
+            cont = 0;
+        }
+    }
+
+    if(dim[1] > 0){
+        int numCarte = dim[1];
+        for(int i = 0; i < numCarte; i++){
+            int card = removeElem(centro, 1, 0);
+            add(mazzoG2, 3, card);
+        }
+    }
+
+    system("cls");
+    title(1);
+    printMazzi(3);
+    cout << endl << "\n\n\t\tCarte giocatore 1: " << dim[2];
+    cout << endl << "\t\tCarte giocatore 2: " << dim[3];
+    if(dim[2] > dim[3]){
+        cout << endl << "\n\n\t\tHa vinto il giocatore 1\n\n";
+    } else {
+        cout << endl << "\n\n\t\tHa vinto il giocatore 2\n\n";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//parte computer vs giocatore
+
+void RubaMazzo::giocatoreVsComputer(){
+    centro = new int[4];
+    dim[1] = 4;
+    int cont = 0;
+
+    for(int i = 0; i < dim[1]; i++){
+        centro[i] = removeElem(carteMazzo, 0, 0);
+    }
+    ricarica();
+    int times = 0;
+    while(times < 18){
+        system("cls");
+        title(2);
+        giocatore(manoG1, mazzoG1, 4, 2);
+        system("cls");
+        title(2);
+        computer();
+        cont++;
+        times++;
+        if(cont == 3 && times < 18){
+            ricarica();
+            cont = 0;
+        }
+    }
+
+    if(dim[1] > 0){
+        int numCarte = dim[1];
+        for(int i = 0; i < numCarte; i++){
+            int card = removeElem(centro, 1, 0);
+            add(mazzoG2, 3, card);
+        }
+    }
+
+    system("cls");
+    title(2);
+    printMazzi(3);
+    cout << endl << "\n\n\t\tCarte Giocatore 1: " << dim[2];
+    cout << endl << "\t\tCarte Computer 2: " << dim[3];
+    if(dim[2] > dim[3]){
+        cout << endl << "\n\n\t\tHa vinto il giocatore 1\n\n";
+    } else {
+        cout << endl << "\n\n\t\tHa vinto il computer\n\n";
+    }
+}
+
+
+
+void RubaMazzo::computer(){
+    if(dim[2] > 0){
+        cout << endl << "Mazzo giocatore\n";
+        cout << endl << "--------------------------------------------";
+        cout << c[mazzoG1[dim[2] - 1]];
+    }
+    cout << endl << "\nCentro\n";
+    cout << endl << "--------------------------------------------\n";
+    print(centro, 1);
+    cout << endl << "\nCarte di computer\n";
+    cout << endl << "--------------------------------------------";
+    print(manoG2, 5);
+    if(dim[3] > 0){
+        cout << endl << "\nMazzo di computer";
+        cout << c[mazzoG1[dim[3] - 1]];
+    }
+
+    cout << endl << "\nIl computer sta pensando.......";
+
+    tryFindCarta();
+
+}
+
+void RubaMazzo::tryFindCarta(){
+    srand(time(NULL));
+    int i = 0;
+    int pos = 0;
+    bool found = false, rubato = false;
+
+    while(i < dim[5] && !found && !rubato){
+        pos = searchCentro(c[manoG2[i]].getNumero());
+        rubato = rubaMazzo(mazzoG1, 2, c[manoG2[i]].getNumero(), mazzoG2, 3);
+        if(pos != -1){
+            found = true;
+        }
+        i++;
+    }
+    i--;
+    if(i < dim[5] && found && !rubato){
+        int card1 = removeElem(centro, 1, pos);
+        int card2 = removeElem(manoG2, 5, i);
+
+        add(mazzoG2, 3, card1);
+        add(mazzoG2, 3, card2);
+        cout << endl << "Il computer ha trovato una carta simile\n";
+    } else {
+        int card = rand() % dim[5];
+        if(rubato == false){
+            int card1 = removeElem(manoG2, 5, card);
+            add(centro, 1, card1);
+            cout << endl << "Il computer non ha trovato niente\n";
+        } else {
+            int card1 = removeElem(manoG2, 5, card);
+            add(mazzoG2, 3, card1);
+            cout << endl << "Il computer ha rubato il mazzo\n";
+
+        }
+    }
+    system("pause");
 }
 
 
@@ -334,10 +466,7 @@ void RubaMazzo::giocatoreVsGiocatore(){
 
 
 
-
-
-
-void RubaMazzo::title(){
+void RubaMazzo::title(int num){
 
     cout << endl << "\t8888888b.           888                    888b     d888";
     cout << endl << "\t888   Y88b          888                    8888b   d8888";
@@ -346,7 +475,13 @@ void RubaMazzo::title(){
     cout << endl << "\t8888888P\"  888  888 888 \"88b     \"88b      888 Y888P 888     \"88b    d88P     d88P  d88\"\"88b";
     cout << endl << "\t888 T88b   888  888 888  888 .d888888      888  Y8P  888 .d888888   d88P     d88P   888  888";
     cout << endl << "\t888  T88b  Y88b 888 888 d88P 888  888      888   \"   888 888  888  d88P     d88P    Y88..88P";
-    cout << endl << "\t888   T88b  \"Y88888 88888P\"  \"Y888888      888       888 \"Y888888 88888888 88888888  \"Y88P\"\n\n\n";
+    cout << endl << "\t888   T88b  \"Y88888 88888P\"  \"Y888888      888       888 \"Y888888 88888888 88888888  \"Y88P\"\n\n";
+
+    if(num == 1){
+        cout << endl << "\t\t\t\t\tGiocatore vs Giocatore\n";
+    } else if (num == 2){
+        cout << endl << "\t\t\t\t\tGiocatore vs Computer\n";
+    }
 
 }
 

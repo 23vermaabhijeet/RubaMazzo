@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     RubaMazzo r;
-    r.title();
+    r.title(-1);
     r.startGame();
     return 0;
 }
