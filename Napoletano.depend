@@ -244,3 +244,38 @@
 	"RubaMazzo.h"
 	<ctime>
 
+1708017084 source:c:\users\14ver\onedrive\documents\github\rubamazzo\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1708028409 c:\users\14ver\onedrive\documents\github\rubamazzo\include\rubamazzo.h
+	"napoletano.h"
+
+1708016888 c:\users\14ver\onedrive\documents\github\rubamazzo\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1708016888 c:\users\14ver\onedrive\documents\github\rubamazzo\include\mazzodicarte.h
+	"carta.h"
+
+1708016888 c:\users\14ver\onedrive\documents\github\rubamazzo\include\carta.h
+	<iostream>
+	<string>
+
+1708023071 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1708016888 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1708016888 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1708096578 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+

@@ -164,12 +164,13 @@ void RubaMazzo::inizio(){
         centro[i] = removeElem(carteMazzo, 0, 0);
     }
     ricarica();
-
-    while(dim[0] != 0){
+    int times = 0;
+    while(times < 18){
         giocatore(manoG1, mazzoG1, 4, 2);
         giocatore(manoG2, mazzoG2, 5, 3);
         cont++;
-        if(cont == 3){
+        times++;
+        if(cont == 3 && times < 18){
             ricarica();
             cont = 0;
         }
@@ -186,12 +187,12 @@ void RubaMazzo::inizio(){
     system("cls");
     title();
     printMazzi(3);
-    cout << endl << "Carte giocatore 1: " << dim[2];
-    cout << endl << "Carte giocatore 2: " << dim[3];
+    cout << endl << "\n\n\t\tCarte giocatore 1: " << dim[2];
+    cout << endl << "\t\tCarte giocatore 2: " << dim[3];
     if(dim[2] > dim[3]){
-        cout << endl << "Ha vinto il giocatore 1";
+        cout << endl << "\n\n\t\tHa vinto il giocatore 1\n\n";
     } else {
-        cout << endl << "Ha vinto il giocatore 2";
+        cout << endl << "\n\n\t\tHa vinto il giocatore 2\n\n";
     }
 }
 
@@ -241,6 +242,9 @@ bool RubaMazzo::removeCentroAddinMazzo(int* &mano, int* &mazzo, int numMano, int
         if(rubato == false){
             int card1 = removeElem(mano, numMano, pos);
             add(centro, 1, card1);
+        } else {
+            int card1 = removeElem(mano, numMano, pos);
+            add(mazzo, numMazzo, card1);
         }
         return false;
     }
@@ -289,7 +293,6 @@ void RubaMazzo::giocatore(int* &mano, int* &mazzo, int numMano, int numMazzo) {
 
 
     cartaScelta--;
-    cout << endl << "Scelta in giocatore: " << c[mano[cartaScelta]].getNumero();
     if(numMazzo == 2){
         removeCentroAddinMazzo(mano, mazzo, numMano, numMazzo, cartaScelta, mazzoG2, 3);
     } else {
