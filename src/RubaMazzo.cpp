@@ -406,7 +406,7 @@ void RubaMazzo::giocatoreVsComputer(){
     system("cls");
     title(2);
     printMazzi(3);
-    cout << endl << "\n\n\t\tCarte Giocatore 1: " << dim[2];
+    cout << endl << "\n\n\t\tCarte Giocatore: " << dim[2];
     cout << endl << "\t\tCarte Computer 2: " << dim[3] << endl;
     if(dim[2] > dim[3]){
         textbackground(LIGHTMAGENTA);
@@ -423,8 +423,8 @@ void RubaMazzo::giocatoreVsComputer(){
 
 
 void RubaMazzo::computer(){
-    cout << endl << "\nCarte di giocatore1\n";
     if(dim[2] > 0){
+        cout << endl << "\nCarte di giocatore1\n";
         textbackground(BROWN);
         textcolor(BLACK);
         cout << endl << " Mazzo giocatore:  ";
@@ -434,14 +434,15 @@ void RubaMazzo::computer(){
         textbackground(BLACK);
         textcolor(WHITE);
     }
-    cout << endl << "--------------------------------------------\n";
+    cout << endl << "\n--------------------------------------------\n";
     cout << endl << "\nCentro\n";
     print(centro, 1);
 
-    cout << endl << "--------------------------------------------";
-    cout << endl << "\nCarte di computer\n";
-    print(manoG2, 5);
+
+//    cout << endl << "\nCarte di computer\n";
+//    print(manoG2, 5);
     if(dim[3] > 0){
+        cout << endl << "--------------------------------------------";
         textbackground(BROWN);
         textcolor(BLACK);
         cout << endl << "\n Mazzo di computer: ";

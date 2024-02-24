@@ -124,8 +124,8 @@ istream& operator>>(istream& in, Carta c){
 
 ostream& operator<<(ostream& out, const Carta c){
     //cout << endl << "Seme: " << c.seme;
-    cout << endl << "\t| Nome: " << c.nome;
-    cout << endl << "\t| Numero: " << c.numero;
+    cout << endl << "    | Nome: " << c.nome;
+    cout << endl << "    | Numero: " << c.numero << "    ";
     //cout << endl << "Punteggio: " << c.punteggio;
     return out;
 }

@@ -258,24 +258,36 @@
 1708016888 c:\users\14ver\onedrive\documents\github\rubamazzo\include\mazzodicarte.h
 	"carta.h"
 
-1708016888 c:\users\14ver\onedrive\documents\github\rubamazzo\include\carta.h
+1708792967 c:\users\14ver\onedrive\documents\github\rubamazzo\include\carta.h
 	<iostream>
 	<string>
+	"conio.h"
 
-1708023071 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\carta.cpp
+1708792928 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\carta.cpp
 	"carta.h"
 	<iostream>
 
 1708016888 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\mazzodicarte.cpp
 	"mazzoDiCarte.h"
 
-1708016888 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\napoletano.cpp
+1708792582 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\napoletano.cpp
 	"napoletano.h"
 	<iostream>
 	<cmath>
 	<ctime>
 
-1708105762 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\rubamazzo.cpp
+1708793665 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\rubamazzo.cpp
 	"RubaMazzo.h"
 	<ctime>
+
+1708788336 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\conio.c
+	"../include/conio.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<windows.h>
+
+1708788336 c:\users\14ver\onedrive\documents\github\rubamazzo\include\conio.h
+	<conio.h>
 

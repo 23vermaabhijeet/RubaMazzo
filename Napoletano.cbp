@@ -36,11 +36,15 @@
 		</Compiler>
 		<Unit filename="include/RubaMazzo.h" />
 		<Unit filename="include/carta.h" />
+		<Unit filename="include/conio.h" />
 		<Unit filename="include/mazzoDiCarte.h" />
 		<Unit filename="include/napoletano.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/RubaMazzo.cpp" />
 		<Unit filename="src/carta.cpp" />
+		<Unit filename="src/conio.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src/mazzoDiCarte.cpp" />
 		<Unit filename="src/napoletano.cpp" />
 		<Extensions>
