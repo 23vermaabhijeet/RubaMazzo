@@ -118,13 +118,25 @@ int RubaMazzo::typeGame() {
 void RubaMazzo::print(int* &mazzo, int numMazzo){
 
     cout << endl;
+
     for(int j = 0; j < 2; j++){
         for(int i = 0; i < dim[numMazzo]; i++){
+            textbackground(3);
             if(j == 0)
-                cout << "\t| Nome: "  << c[mazzo[i]].getNome();
-            else
-                cout << "\t| Numero: "  << c[mazzo[i]].getNumero();
+                cout << "| Nome: "  << c[mazzo[i]].getNome();
+            else {
+                cout << "| Numero: "  << c[mazzo[i]].getNumero();
+                if(c[mazzo[i]].getNumero() >= 10){
+                    cout << "   ";
+                } else {
+                    cout << "    ";
+                }
+            }
+
+            textbackground(0);
+            cout << " ";
         }
+
         cout << endl;
     }
 }
@@ -136,9 +148,14 @@ void RubaMazzo::printMazzi(int numMazzo){
         print(manoG1, 4);
     }
     if(dim[2] > 0){
-        cout << endl << "Mazzo giocatore 1:";
+        textbackground(BROWN);
+        textcolor(BLACK);
+        cout << endl << " Mazzo giocatore 1:";
         cout << c[mazzoG1[dim[2]- 1]];
+        textbackground(LIGHTGREEN);
         cout << endl << "Carte presenti nel mazzo di giocatore: " << dim[2];
+        textcolor(WHITE);
+        textbackground(BLACK);
     }
 
 
@@ -153,9 +170,15 @@ void RubaMazzo::printMazzi(int numMazzo){
         print(manoG2, 5);
     }
     if(dim[3] > 0){
-        cout << endl <<  "Mazzo giocatore 2:";
-        cout <<  c[mazzoG2[dim[3]- 1]];
-        cout << endl <<  "Carte presenti nel mazzo di giocatore: " << dim[3];
+        textbackground(BROWN);
+        textcolor(BLACK);
+        cout << endl << " Mazzo giocatore 2:";
+        cout << c[mazzoG2[dim[3]- 1]];
+        textbackground(LIGHTGREEN);
+        cout << endl << "Carte presenti nel mazzo di giocatore: " << dim[3];
+        textbackground(BLACK);
+        textcolor(WHITE);
+
     }
 
 }
@@ -233,7 +256,11 @@ bool RubaMazzo::removeCentroAddinMazzo(int* &mano, int* &mazzo, int numMano, int
 bool RubaMazzo::rubaMazzo(int* &mazzo, int numMazzo, int scelta, int* &mazzoDest, int numDest){
     if(dim[numMazzo] > 0 && scelta == c[mazzo[dim[numMazzo] - 1]].getNumero()){
         int card = 0;
-        cout << endl << "\t\t\t RUBA MAZZO!!! \n\n";
+        cout << endl << "\t\t";
+        textbackground(LIGHTMAGENTA);
+        cout << "RUBA MAZZO!!!";
+        textbackground(BLACK);
+        cout << endl << "\n\n";
         int numCarte = dim[numMazzo];
         for(int i = 0; i < numCarte; i++){
             card = removeElem(mazzo, numMazzo, 0);
@@ -315,13 +342,20 @@ void RubaMazzo::giocatoreVsGiocatore(){
     system("cls");
     title(1);
     printMazzi(3);
+
+
     cout << endl << "\n\n\t\tCarte giocatore 1: " << dim[2];
-    cout << endl << "\t\tCarte giocatore 2: " << dim[3];
+    cout << endl << "\t\tCarte giocatore 2: " << dim[3] << endl;
     if(dim[2] > dim[3]){
-        cout << endl << "\n\n\t\tHa vinto il giocatore 1\n\n";
+        textbackground(LIGHTMAGENTA);
+        cout << endl << "\n\t\tHa vinto il giocatore 1\n";
+        textbackground(BLACK);
     } else {
-        cout << endl << "\n\n\t\tHa vinto il giocatore 2\n\n";
+        textbackground(LIGHTMAGENTA);
+        cout << endl << "\n\t\tHa vinto il giocatore 2\n";
+        textbackground(BLACK);
     }
+    cout << endl;
 }
 
 
@@ -373,34 +407,52 @@ void RubaMazzo::giocatoreVsComputer(){
     title(2);
     printMazzi(3);
     cout << endl << "\n\n\t\tCarte Giocatore 1: " << dim[2];
-    cout << endl << "\t\tCarte Computer 2: " << dim[3];
+    cout << endl << "\t\tCarte Computer 2: " << dim[3] << endl;
     if(dim[2] > dim[3]){
-        cout << endl << "\n\n\t\tHa vinto il giocatore 1\n\n";
+        textbackground(LIGHTMAGENTA);
+        cout << endl << "\n\t\tHa vinto il giocatore\n";
+        textbackground(BLACK);
     } else {
-        cout << endl << "\n\n\t\tHa vinto il computer\n\n";
+        textbackground(LIGHTMAGENTA);
+        cout << endl << "\n\t\tHa vinto il computer\n";
+        textbackground(BLACK);
     }
+    cout << endl;
 }
 
 
 
 void RubaMazzo::computer(){
+    cout << endl << "\nCarte di giocatore1\n";
     if(dim[2] > 0){
-        cout << endl << "Mazzo giocatore\n";
-        cout << endl << "--------------------------------------------";
+        textbackground(BROWN);
+        textcolor(BLACK);
+        cout << endl << " Mazzo giocatore:  ";
         cout << c[mazzoG1[dim[2] - 1]];
+        textbackground(LIGHTGREEN);
+        cout << endl << "Numero di carte presenti nel mazzo di giocatore: " << dim[2];
+        textbackground(BLACK);
+        textcolor(WHITE);
     }
-    cout << endl << "\nCentro\n";
     cout << endl << "--------------------------------------------\n";
+    cout << endl << "\nCentro\n";
     print(centro, 1);
-    cout << endl << "\nCarte di computer\n";
+
     cout << endl << "--------------------------------------------";
+    cout << endl << "\nCarte di computer\n";
     print(manoG2, 5);
     if(dim[3] > 0){
-        cout << endl << "\nMazzo di computer";
-        cout << c[mazzoG1[dim[3] - 1]];
+        textbackground(BROWN);
+        textcolor(BLACK);
+        cout << endl << "\n Mazzo di computer: ";
+        cout << c[mazzoG2[dim[3] - 1]];
+        textbackground(LIGHTGREEN);
+        cout << endl << "Numero di carte presenti nel mazzo di computer: " << dim[3];
+        textbackground(BLACK);
+        textcolor(WHITE);
     }
 
-    cout << endl << "\nIl computer sta pensando.......";
+    cout << endl << "\nIl computer sta pensando.......\n";
 
     tryFindCarta();
 
@@ -484,5 +536,3 @@ void RubaMazzo::title(int num){
     }
 
 }
-
-
