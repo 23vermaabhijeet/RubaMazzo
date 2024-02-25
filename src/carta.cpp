@@ -123,9 +123,10 @@ istream& operator>>(istream& in, Carta c){
 }
 
 ostream& operator<<(ostream& out, const Carta c){
-    //cout << endl << "Seme: " << c.seme;
+//    cout << endl << "    | Seme: " << c.seme;
     cout << endl << "    | Nome: " << c.nome;
-    cout << endl << "    | Numero: " << c.numero << "    ";
-    //cout << endl << "Punteggio: " << c.punteggio;
+    cout << endl << "    | Numero: " << c.numero;
+    (c.numero >= 10) ? cout << "   " : cout << "    ";
+//    cout << endl << "    | Punteggio: " << c.punteggio;
     return out;
 }
