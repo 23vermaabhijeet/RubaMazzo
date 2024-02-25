@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1708876734 source:c:\users\14ver\onedrive\documents\github\rubamazzo\main.cpp
+	<iostream>
+	"RubaMazzo.h"
+	<ctime>
+
+1708874939 c:\users\14ver\onedrive\documents\github\rubamazzo\include\rubamazzo.h
+	"napoletano.h"
+
+1708874939 c:\users\14ver\onedrive\documents\github\rubamazzo\include\napoletano.h
+	"mazzoDiCarte.h"
+
+1708874939 c:\users\14ver\onedrive\documents\github\rubamazzo\include\mazzodicarte.h
+	"carta.h"
+
+1708874939 c:\users\14ver\onedrive\documents\github\rubamazzo\include\carta.h
+	<iostream>
+	<string>
+	"conio.h"
+
+1708874939 c:\users\14ver\onedrive\documents\github\rubamazzo\include\conio.h
+	<conio.h>
+
+1708880537 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\carta.cpp
+	"carta.h"
+	<iostream>
+
+1708874939 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\conio.c
+	"../include/conio.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<windows.h>
+
+1708874939 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\mazzodicarte.cpp
+	"mazzoDiCarte.h"
+
+1708874939 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\napoletano.cpp
+	"napoletano.h"
+	<iostream>
+	<cmath>
+	<ctime>
+
+1708882482 source:c:\users\14ver\onedrive\documents\github\rubamazzo\src\rubamazzo.cpp
+	"RubaMazzo.h"
+	<ctime>
+

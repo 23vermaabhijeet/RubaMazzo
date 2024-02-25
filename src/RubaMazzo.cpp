@@ -564,5 +564,8 @@ void RubaMazzo::viewRegolamento()
     textcolor(WHITE);
     cout << endl << endl;
     system("pause");
+    system("cls");
+    title(-1);
+    startGame();
 
 }
